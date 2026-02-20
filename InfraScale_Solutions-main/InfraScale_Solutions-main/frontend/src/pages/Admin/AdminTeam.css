@@ -1,0 +1,106 @@
+/* AdminTeam.css */
+
+/* Main Container to ensure padding and alignment */
+.admin-team-container {
+  padding: 2rem;
+  font-family: 'Inter', sans-serif;
+  color: #1e293b;
+}
+
+h2 {
+  margin-bottom: 1.5rem;
+  font-size: 1.75rem;
+  border-bottom: 2px solid #e2e8f0;
+  padding-bottom: 0.5rem;
+}
+
+/* Modern Form Grid for Member Creation */
+form {
+  background: #f8fafc;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+form input {
+  padding: 0.75rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  background: white;
+}
+
+form input:focus {
+  outline: 2px solid #2563eb;
+  border-color: transparent;
+}
+
+/* Button Styling */
+form button {
+  grid-column: 1 / -1; /* Spans full width of the grid */
+  background: #2563eb;
+  color: white;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+form button:hover {
+  background: #1d4ed8;
+}
+
+/* Professional Table Styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+thead {
+  background-color: #f1f5f9;
+}
+
+th {
+  text-align: left;
+  padding: 1rem;
+  font-weight: 600;
+  color: #475569;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+td {
+  padding: 1rem;
+  border-bottom: 1px solid #f1f5f9;
+  vertical-align: middle;
+}
+
+tr:hover {
+  background-color: #f8fafc;
+}
+
+/* Delete Button */
+table button {
+  background: #ef4444;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+table button:hover {
+  background: #dc2626;
+}

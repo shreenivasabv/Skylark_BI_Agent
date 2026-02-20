@@ -1,0 +1,16 @@
+.techstack {
+  padding: 80px 50px;
+  background-color: #0b1120;
+  color: white;
+}
+
+.techstack h2 {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+}

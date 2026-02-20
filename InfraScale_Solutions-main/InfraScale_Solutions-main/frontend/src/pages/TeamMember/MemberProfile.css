@@ -1,0 +1,52 @@
+.profile-container {
+  padding: 100px 10%;
+  background: #0b1220;
+  color: white;
+  min-height: 100vh;
+}
+
+.profile-header {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+.profile-header img {
+  width: 180px;
+  height: 180px;
+  border-radius: 16px;
+  object-fit: cover;
+  border: 3px solid #1f2a44;
+}
+
+.profile-section {
+  margin-bottom: 50px;
+}
+
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.skill-badge {
+  background: #1f2a44;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+.project-card,
+.work-card {
+  background: #131c2f;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+.loading {
+  padding: 150px;
+  text-align: center;
+  color: white;
+}

@@ -1,0 +1,169 @@
+.admin-service-detail {
+  padding: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.back-btn {
+  background: #3b82f6;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-bottom: 30px;
+  font-size: 14px;
+  transition: background 0.3s;
+}
+
+.back-btn:hover {
+  background: #2563eb;
+}
+
+.service-detail-card {
+  background: white;
+  border-radius: 12px;
+  padding: 40px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.service-detail-card h2 {
+  color: #1f2937;
+  margin-bottom: 30px;
+  font-size: 28px;
+}
+
+.view-mode .info-section {
+  margin-bottom: 25px;
+}
+
+.view-mode .info-section h3 {
+  color: #374151;
+  font-size: 16px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.view-mode .info-section p {
+  color: #6b7280;
+  line-height: 1.6;
+  background: #f9fafb;
+  padding: 15px;
+  border-radius: 6px;
+}
+
+.detailed-report {
+  white-space: pre-wrap;
+  word-break: break-word;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.edit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  color: #374151;
+  font-weight: 600;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 14px;
+  font-family: inherit;
+  resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.button-group {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+  justify-content: flex-end;
+}
+
+.save-btn,
+.edit-btn {
+  background: #10b981;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.save-btn:hover,
+.edit-btn:hover {
+  background: #059669;
+}
+
+.cancel-btn {
+  background: #6b7280;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.cancel-btn:hover {
+  background: #4b5563;
+}
+
+.loading,
+.error {
+  text-align: center;
+  padding: 50px;
+  color: #6b7280;
+  font-size: 16px;
+}
+
+.error {
+  color: #ef4444;
+}
+
+@media (max-width: 768px) {
+  .admin-service-detail {
+    padding: 15px;
+  }
+
+  .service-detail-card {
+    padding: 20px;
+  }
+
+  .button-group {
+    flex-direction: column;
+  }
+
+  .save-btn,
+  .edit-btn,
+  .cancel-btn {
+    width: 100%;
+  }
+}

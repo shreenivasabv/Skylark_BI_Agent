@@ -1,0 +1,71 @@
+.team-page {
+  padding: 60px 20px; /* Reduced side padding for better fit on tablets */
+  background: #0b1120;
+  color: white;
+  max-width: 1200px; /* Centers the content */
+  margin: 0 auto;
+}
+
+.team-page h1 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2.5rem;
+}
+
+.team-grid {
+  display: grid;
+  /* Adjust min-width to 220px to help squeeze 4 members on standard screens */
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); 
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.team-card {
+  background: #1f2937;
+  padding: 20px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers text if desired */
+  text-align: center;
+  transition: transform 0.3s ease;
+  border: 1px solid #374151;
+}
+
+.team-card:hover {
+  transform: translateY(-5px); /* Adds a subtle lift effect */
+}
+
+.team-card img {
+  width: 100%;
+  height: 250px; /* Increased height for better portrait aspect ratio */
+  object-fit: cover; /* Ensures image isn't squashed */
+  border-radius: 8px;
+  margin-bottom: 15px;
+  display: block;
+}
+
+.team-card h3 {
+  margin: 10px 0 5px;
+  color: #60a5fa; /* Light blue for names */
+}
+
+.team-card p {
+  margin: 5px 0;
+  font-size: 0.9rem;
+  color: #9ca3af;
+}
+
+.team-card ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+  font-size: 0.85rem;
+}
+
+.team-card li {
+  background: #374151;
+  margin-bottom: 4px;
+  padding: 4px 10px;
+  border-radius: 4px;
+}

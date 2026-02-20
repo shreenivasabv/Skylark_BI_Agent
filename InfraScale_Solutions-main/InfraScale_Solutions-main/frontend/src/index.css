@@ -1,0 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+  background-color: #0b1120;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#root {
+  width: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.page-content {
+  padding-top: 80px; /* Same height as navbar */
+}

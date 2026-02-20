@@ -1,0 +1,20 @@
+.insight {
+  padding: 80px 50px;
+  background-color: #111827;
+  color: white;
+  text-align: center;
+}
+
+.insight-sub {
+  margin-bottom: 30px;
+  color: #cbd5e1;
+}
+
+.insight ul {
+  list-style: none;
+  padding: 0;
+}
+
+.insight li {
+  margin: 15px 0;
+}

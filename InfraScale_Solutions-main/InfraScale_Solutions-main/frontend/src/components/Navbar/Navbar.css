@@ -1,0 +1,119 @@
+.navbar {
+  background-color: #0f172a;
+  padding: 0 40px; /* Adjusted padding for better edge alignment */
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  color: white;
+  height: 80px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 22px;
+  letter-spacing: 2px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  margin-left: auto; /* This pushes the links to the right */
+  margin-right: 30px; /* This creates space between the links and the dots */
+}
+
+.three-dot {
+  font-size: 30px; /* Slightly larger for better visibility */
+  cursor: pointer;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  user-select: none;
+}
+
+.three-dot:hover {
+  color: #2563eb;
+}
+
+/* Dropdown styling */
+.nav-links li {
+  position: relative;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0; /* Align dropdown to the right of the parent link */
+  background-color: #1f2937;
+  min-width: 180px;
+  border-radius: 4px;
+  padding: 10px 0;
+  list-style: none;
+}
+
+/* Ensure sub-links look good */
+.dropdown-menu li a {
+  padding: 10px 20px;
+  display: block;
+}
+
+.dropdown-menu li:hover {
+  background-color: #374151;
+}
+
+/* Container to provide a bridge between the dots and the menu so it doesn't disappear */
+.three-dot-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 100%; /* Ensures the hover area covers the full navbar height */
+  padding: 0 15px;
+  cursor: pointer;
+}
+
+.three-dot {
+  color: #007bff; /* The blue color from your image */
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* The White Dropdown Box */
+.admin-dropdown {
+  position: absolute;
+  top: 50px;           /* Adjust this so it lines up with your other dropdowns */
+  right: 0;            /* Aligns the right edge of the box with the dots */
+  background-color: #ffffff;
+  min-width: 140px;
+  padding: 15px;
+  border-radius: 4px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Soft shadow for the floating effect */
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.admin-dropdown a {
+  color: #333 !important; /* Dark text for the white background */
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.admin-dropdown a:hover {
+  color: #007bff !important; /* Changes to blue when hovering the text */
+}

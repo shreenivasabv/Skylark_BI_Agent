@@ -1,0 +1,79 @@
+/* ServicesPage.css */
+
+.services-section {
+  padding: 60px 5%;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #ffffff;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.services-grid {
+  display: grid;
+  /* This creates columns that are at least 300px but no more than 350px */
+  /* If there is only 1 item, it will only take up one 'slot' on the left */
+  grid-template-columns: repeat(auto-fill, minmax(300px, 350px));
+  gap: 30px;
+  width: 100%;
+  max-width: 1200px; /* Limits the row width */
+  justify-content: center; /* Centers the items if they don't fill the whole row */
+}
+
+.service-card {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.card-image-container {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  background-color: #000;
+}
+
+.card-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image fills the area without stretching */
+}
+
+.card-content {
+  padding: 20px;
+  text-align: left;
+}
+
+.card-content h3 {
+  color: #3b82f6; /* Light blue for title */
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+}
+
+.card-content p {
+  color: #cbd5e1;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.empty-state {
+  color: #94a3b8;
+  font-size: 1.2rem;
+  margin-top: 50px;
+}

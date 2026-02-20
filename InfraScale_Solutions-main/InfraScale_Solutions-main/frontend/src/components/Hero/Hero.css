@@ -1,0 +1,70 @@
+.hero {
+  position: relative; /* Required for absolute child positioning */
+  padding: 100px 50px;
+  text-align: center;
+  background: linear-gradient(135deg, #0b1120, #111827);
+  color: white;
+  min-height: 500px; /* Ensures consistent height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* Prevents video from spilling out */
+}
+
+/* Image Background Styling */
+.hero-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  z-index: 1; /* Sits behind content */
+  opacity: 0.3; /* Low opacity to keep text readable */
+}
+
+/* Ensure content sits on top of the video */
+.hero-content {
+  position: relative;
+  z-index: 2; /* Sits above video */
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  font-size: 38px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  max-width: 800px;
+  margin: 0 auto 30px;
+  line-height: 1.6;
+  color: #cbd5e1;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.primary-btn {
+  padding: 12px 25px;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.secondary-btn {
+  padding: 12px 25px;
+  background: transparent;
+  color: white;
+  border: 1px solid white;
+  cursor: pointer;
+}

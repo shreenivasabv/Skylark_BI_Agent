@@ -1,0 +1,80 @@
+/* AdminServices.css */
+
+.admin-services-container {
+  padding: 20px;
+  max-width: 800px; 
+}
+
+.admin-services-container h2 {
+  color: #1e293b;
+  margin-bottom: 25px;
+  font-size: 1.8rem;
+  border-bottom: 2px solid #e2e8f0;
+  padding-bottom: 10px;
+}
+
+.service-form {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column; 
+  gap: 20px;
+  border: 1px solid #f1f5f9;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column; 
+  gap: 8px;
+}
+
+.form-group label {
+  font-weight: 600;
+  color: #475569;
+  font-size: 0.95rem;
+}
+
+/* Added 'select' here so it shares the same style as input and textarea */
+.form-group input, 
+.form-group textarea,
+.form-group select {
+  padding: 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.2s;
+  background-color: #fff; /* Ensures white background for the dropdown */
+}
+
+.form-group textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+/* Added focus state for select */
+.form-group input:focus, 
+.form-group textarea:focus,
+.form-group select:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.add-service-btn {
+  background-color: #2563eb;
+  color: white;
+  padding: 14px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+  margin-top: 10px;
+}
+
+.add-service-btn:hover {
+  background-color: #1d4ed8;
+}
