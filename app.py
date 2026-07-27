@@ -5,6 +5,8 @@ import pandas as pd
 import requests
 import streamlit as st
 
+from data_cleaning import clean_dataframe, quality_flags
+
 # ------------------------------
 # Configuration
 # ------------------------------
@@ -61,11 +63,11 @@ GEMINI_MODEL = "gemini-2.5-flash"
 
 
 # ------------------------------
-# Fetch Monday Board
+# Fetch Monday Board (raw, no cleaning here anymore)
 # ------------------------------
 
 @st.cache_data(ttl=300)
-def fetch_and_clean_board(board_id):
+def fetch_board(board_id):
 
     query = f"""
     query {{
@@ -123,18 +125,7 @@ def fetch_and_clean_board(board_id):
 
             records.append(row)
 
-        df = pd.DataFrame(records)
-
-        if df.empty:
-            return df
-
-        df.fillna("Unknown / Missing", inplace=True)
-
-        for col in df.columns:
-            if "date" in col.lower():
-                df[col] = pd.to_datetime(df[col], errors="coerce")
-
-        return df
+        return pd.DataFrame(records)
 
     except Exception as e:
         st.error(f"Monday API Error:\n{e}")
@@ -142,7 +133,7 @@ def fetch_and_clean_board(board_id):
 
 
 # ------------------------------
-# Sidebar
+# Sidebar + Load + Clean data
 # ------------------------------
 
 st.sidebar.header("Status")
@@ -152,12 +143,30 @@ if st.sidebar.button("🔄 Refresh Data"):
 
 with st.spinner("Loading Monday.com data..."):
 
-    df_deals = fetch_and_clean_board(DEALS_BOARD_ID)
-    df_work = fetch_and_clean_board(WORK_ORDERS_BOARD_ID)
+    raw_deals = fetch_board(DEALS_BOARD_ID)
+    raw_work = fetch_board(WORK_ORDERS_BOARD_ID)
+
+    # <-- THIS is where data_cleaning.py gets called
+    df_deals, deals_quality = clean_dataframe(raw_deals)
+    df_work, work_quality = clean_dataframe(raw_work)
 
 st.sidebar.success(
     f"Deals: {len(df_deals)} | Work Orders: {len(df_work)}"
 )
+
+deals_flags = quality_flags(deals_quality)
+work_flags = quality_flags(work_quality)
+
+if deals_flags or work_flags:
+    with st.sidebar.expander("⚠️ Data Quality Notes"):
+        if deals_flags:
+            st.markdown("**Deals board:**")
+            for f in deals_flags:
+                st.markdown(f"- {f}")
+        if work_flags:
+            st.markdown("**Work Orders board:**")
+            for f in work_flags:
+                st.markdown(f"- {f}")
 
 # ------------------------------
 # Show Data
